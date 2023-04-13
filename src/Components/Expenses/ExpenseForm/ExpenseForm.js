@@ -18,9 +18,12 @@ const ExpenseForm = (props) => {
     });
     
       
-    const reload = ()=>{
-        window.location.reload();
-    }
+   
+      
+            
+      
+        
+  
 
 
     const submitHandler = async (event)=>{
@@ -37,9 +40,9 @@ const ExpenseForm = (props) => {
                 console.log(response);
                 setUserData( response.data.items);
                 console.log(Userdata); 
-               
+                window.location.reload();
                 props.onSaveIncomeData(Userdata);
-              
+             
         // props.onSaveIncomeData(IncomeItem);
       
     };
@@ -64,7 +67,7 @@ const ExpenseForm = (props) => {
     </div>
     <div className='new-expense__actions'> 
     <button type="button" onClick={props.onCancel}>cancel</button>
-     <button type="submit" onClick={reload }>Add Expense</button>
+     <button type="submit" >Add Expense</button>
     </div>
     </form>   
   );  

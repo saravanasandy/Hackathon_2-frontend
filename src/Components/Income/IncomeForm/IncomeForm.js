@@ -20,9 +20,7 @@ const IncomeForm = (props) => {
     });
     
       
-    const reload = ()=>{
-        window.location.reload();
-    }
+ 
 
 
     const submitHandler = async (event)=>{
@@ -30,7 +28,7 @@ const IncomeForm = (props) => {
        
             console.log(IncomeItem);
 
-          const  response = await axios.post("http://localhost:3005/item",{
+          const  response = await axios.post("https://money-manager-ei85.onrender.com/item",{
                     title : IncomeItem.title,
                     amount : IncomeItem.amount,
                     date   :  (new Date(IncomeItem.date)).toString()
@@ -39,7 +37,7 @@ const IncomeForm = (props) => {
                 console.log(response);
                 setUserData( response.data.items);
                 console.log(Userdata); 
-               
+                window.location.reload();
                 props.onSaveIncomeData(Userdata);
                
         // props.onSaveIncomeData(IncomeItem);
@@ -67,7 +65,7 @@ const IncomeForm = (props) => {
 </div>
 <div className='new-income__actions'> 
 <button type="button" onClick={props?.onCancel}>cancel</button>
- <button type="submit" onClick={reload}>Add Expense</button>
+ <button type="submit" >Add Expense</button>
 </div>
 </form>
   )
