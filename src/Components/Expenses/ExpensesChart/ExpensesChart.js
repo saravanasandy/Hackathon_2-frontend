@@ -22,7 +22,7 @@ const ExpensesChart = (props) => {
       // const incomeMonth =  new Date(income.date).toLocaleString("en-US", {month:"long"});
         const expenseMonth = new Date(expense.date).getMonth()
         console.log(expenseMonth);
-        charrtDataPoint[expenseMonth].value += expense.amount;
+        charrtDataPoint[expenseMonth].value += Number(expense.amount);
     }
     console.log(charrtDataPoint);
   return (
