@@ -12,7 +12,7 @@ const IncomesItem = (props) => {
               "Do you want Delete this data"
             );
             if(ask){
-              await axios.delete(`https://money-manager-ei85.onrender.com/item/${id}`);
+              await axios.delete(`http://localhost:3005/item/${id}`);
               window.location.reload();
             }
            

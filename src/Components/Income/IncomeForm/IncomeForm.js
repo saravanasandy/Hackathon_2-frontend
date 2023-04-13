@@ -30,7 +30,7 @@ const IncomeForm = (props) => {
        
             console.log(IncomeItem);
 
-          const  response = await axios.post("https://money-manager-ei85.onrender.com/item",{
+          const  response = await axios.post("http://localhost:3005/item",{
                     title : IncomeItem.title,
                     amount : IncomeItem.amount,
                     date   :  (new Date(IncomeItem.date)).toString()

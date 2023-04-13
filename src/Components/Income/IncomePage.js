@@ -11,7 +11,7 @@ const IncomePage = () => {
 
   let loadData = async ()=>{
    
-    let users = await axios.get('https://money-manager-ei85.onrender.com/items');
+    let users = await axios.get('http://localhost:3005/items');
     console.log(users);
   
     SetPreviousdata(users.data)
