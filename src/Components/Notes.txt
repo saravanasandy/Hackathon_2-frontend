@@ -1,0 +1,10 @@
+date :- 
+
+https://bobbyhadz.com/blog/javascript-typeerror-getfullyear-is-not-a-function
+
+https://bobbyhadz.com/
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+https://www.w3resource.com/javascript-exercises/javascript-date-exercises.php
